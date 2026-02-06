@@ -1,7 +1,11 @@
 import type { Creature, Post, SearchResponse } from "./types";
 
-const API_BASE =
-  import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, "") || "http://localhost:8787";
+const configuredApiBase = import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, "");
+const API_BASE = configuredApiBase || (import.meta.env.PROD ? "" : "http://localhost:8787");
+
+if (import.meta.env.PROD && !configuredApiBase) {
+  throw new Error("VITE_API_BASE_URL is not configured for production build.");
+}
 
 function getCookie(name: string): string | undefined {
   const hit = document.cookie
