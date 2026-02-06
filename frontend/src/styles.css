@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f8fb;
+  color: #152433;
+}
+
+.shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+a {
+  color: #005a87;
+  text-decoration: none;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  max-width: 640px;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 8px;
+}
+
+button,
+.button {
+  border: 1px solid #0a4d76;
+  background: #0a4d76;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
