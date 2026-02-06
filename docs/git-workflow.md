@@ -49,3 +49,5 @@ Examples:
 - [ ] migration impact checked
 - [ ] secrets are not committed
 
+## Bootstrap note
+Initial bootstrap tracked by issue `#1`.
